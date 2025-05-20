@@ -1,0 +1,31 @@
+CREATE DATABASE student_results;
+USE student_results;
+
+CREATE TABLE Student (
+    Student_id INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Branch VARCHAR(100),
+    Class VARCHAR(50),
+    Semester INT,
+    Academic_Year VARCHAR(20)
+);
+
+CREATE TABLE MSE (
+    Student_id INT PRIMARY KEY,
+    CN FLOAT,
+    WT FLOAT,
+    OS FLOAT,
+    DBMS FLOAT,
+    Cloud FLOAT,
+    FOREIGN KEY (Student_id) REFERENCES Student(Student_id)
+);
+
+CREATE TABLE ESE (
+    Student_id INT PRIMARY KEY,
+    CN FLOAT,
+    WT FLOAT,
+    OS FLOAT,
+    DBMS FLOAT,
+    Cloud FLOAT,
+    FOREIGN KEY (Student_id) REFERENCES Student(Student_id)
+);
